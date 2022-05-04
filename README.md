@@ -13,5 +13,5 @@
 - Ricardo Hatsugai
 
 ### Ferramentas utilizadas para este projeto:
-- Delphi 10.1 (Tokio).
+- Delphi 10.1 (Tokio-Trial).
 - Microsoft Access 2019 (Modo de compatibilidade 2003).
