@@ -2,7 +2,7 @@
 
 ## O trabalho consiste em fazer duas interfaces de interação com o usuário.
 - A primeira, deverá ser pouco agradável ou deficiente no quesito intuitiva e comunicativa, deixando o usuário com dúvidas e sem saber direito o que está acontecendo.
-- A segunda, deverá ser um interface amigável com muita informação e aspecto agradável ao usuário.
+- A segunda, deverá ser uma interface amigável com muita informação e aspecto agradável ao usuário.
 
 ### Integrantes do grupo:
 - Alexandre de Almeida Xavier.
