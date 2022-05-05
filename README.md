@@ -33,3 +33,23 @@
   13. id_faculdade (texto);
   14. id_curso (texto);
   15. periodo (texto);
+
+### *Estados*
+  1. id (Número auto incremento primary key);
+  2. estado (texto);
+
+### *Cidades*
+  1. id (Número auto incremento primary key);
+  2. cidade (texto);
+  3. id_estado (numero);
+
+### *Faculdades*
+  1. id (Número auto incremento primary key);
+  2. faculdade (texto);
+
+### *Cursos*
+  1. id (Número auto incremento primary key);
+  2. curso (texto);
+  3. id_faculdade (numero);
+
+### **Relacionamentos**
