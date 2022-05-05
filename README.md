@@ -15,3 +15,21 @@
 ### Ferramentas utilizadas para este projeto:
 - Delphi 10.1 (Tokio-Trial).
 - Microsoft Access 2019 (Modo de compatibilidade 2003).
+
+### Entidades do banco de dados
+### *Clientes*
+  1. id (Número auto incremento primary key);
+  2. data (data/hora);
+  3. nome (texto);
+  4. endereco (texto);
+  5. complemento (texto);
+  6. bairro (texto);
+  7. id_cidade (número);
+  8. id_estado (número);
+  9. cep (texto);
+  10. telefone (texto);
+  11. email (texto);
+  12. celular (texto);
+  13. id_faculdade (texto);
+  14. id_curso (texto);
+  15. periodo (texto);
