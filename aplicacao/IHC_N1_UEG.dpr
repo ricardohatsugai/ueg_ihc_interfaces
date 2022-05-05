@@ -5,7 +5,8 @@ uses
   UFrm_Principal in 'UFrm_Principal.pas' {Frm_Principal},
   UTClientes in 'UTClientes.pas',
   UTEstados in 'UTEstados.pas',
-  UTCidades in 'UTCidades.pas';
+  UTCidades in 'UTCidades.pas',
+  UTFaculdades in 'UTFaculdades.pas';
 
 {$R *.res}
 
