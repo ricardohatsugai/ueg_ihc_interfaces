@@ -3,7 +3,8 @@ program IHC_N1_UEG;
 uses
   Vcl.Forms,
   UFrm_Principal in 'UFrm_Principal.pas' {Frm_Principal},
-  UTClientes in 'UTClientes.pas';
+  UTClientes in 'UTClientes.pas',
+  UTEstados in 'UTEstados.pas';
 
 {$R *.res}
 
