@@ -53,3 +53,5 @@
   3. id_faculdade (numero);
 
 ### **Relacionamentos**
+
+<img src="imagens/mer.PNG">
