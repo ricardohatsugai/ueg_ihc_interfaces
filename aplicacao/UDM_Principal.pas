@@ -8,6 +8,9 @@ uses
 type
   TDM_Principal = class(TDataModule)
     ADOConnection1: TADOConnection;
+    ADOTEstado: TADOTable;
+    ADOTEstadoid: TAutoIncField;
+    ADOTEstadoestado: TWideStringField;
   private
     { Private declarations }
   public
