@@ -6,7 +6,8 @@ uses
   UTClientes in 'UTClientes.pas',
   UTEstados in 'UTEstados.pas',
   UTCidades in 'UTCidades.pas',
-  UTFaculdades in 'UTFaculdades.pas';
+  UTFaculdades in 'UTFaculdades.pas',
+  UTCursos in 'UTCursos.pas';
 
 {$R *.res}
 
