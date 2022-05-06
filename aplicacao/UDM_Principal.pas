@@ -43,6 +43,19 @@ type
     CDS_Clientesid_curso: TIntegerField;
     CDS_Clientesperiodo: TWideStringField;
     DS_Clientes: TDataSource;
+    ADOQ_Cidades: TADOQuery;
+    ADOQ_Cidadesid: TAutoIncField;
+    ADOQ_Cidadescidade: TWideStringField;
+    ADOQ_Cidadesid_estado: TIntegerField;
+    ADOQ_Estados: TADOQuery;
+    ADOQ_Estadosid: TAutoIncField;
+    ADOQ_Estadosestado: TWideStringField;
+    ADOQ_Cidadesestado_lookup: TStringField;
+    CDS_Clientescidade_lookup: TStringField;
+    CDS_Clientesestado_lookup: TStringField;
+    ADOQ_ClientesAuxiliar: TADOQuery;
+    ADOQ_ClientesAuxiliarid: TAutoIncField;
+    ADOQ_ClientesAuxiliarnome: TWideStringField;
   private
     { Private declarations }
   public

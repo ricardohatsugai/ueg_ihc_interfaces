@@ -1,6 +1,7 @@
 object Frm_Principal: TFrm_Principal
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
   Caption = 'Sistema de Cadastro de Alunos'
   ClientHeight = 611
   ClientWidth = 955
@@ -4176,7 +4177,6 @@ object Frm_Principal: TFrm_Principal
     Caption = 'ToolBar1'
     Images = ImageList1
     TabOrder = 0
-    ExplicitTop = -6
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -4210,7 +4210,7 @@ object Frm_Principal: TFrm_Principal
     Left = 672
     Top = 112
     Bitmap = {
-      494C010102000800140010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010102000800180010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       00000000000000000000000000000000000000000000C98936FFC98936FFC989
       36FFC98936FFC98936FFC98936FFC98936FFC98936FFC98936FFC98936FFC989

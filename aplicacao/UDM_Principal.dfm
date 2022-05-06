@@ -96,6 +96,7 @@ object DM_Principal: TDM_Principal
   end
   object DSP_Clientes: TDataSetProvider
     DataSet = ADOQ_Clientes
+    Options = [poAllowCommandText, poUseQuoteChar]
     Left = 72
     Top = 176
   end
@@ -146,8 +147,30 @@ object DM_Principal: TDM_Principal
     object CDS_Clientesid_cidade: TIntegerField
       FieldName = 'id_cidade'
     end
+    object CDS_Clientescidade_lookup: TStringField
+      DisplayLabel = 'Cidade'
+      FieldKind = fkLookup
+      FieldName = 'cidade_lookup'
+      LookupDataSet = ADOQ_Cidades
+      LookupKeyFields = 'id'
+      LookupResultField = 'cidade'
+      KeyFields = 'id_cidade'
+      Size = 35
+      Lookup = True
+    end
     object CDS_Clientesid_estado: TIntegerField
       FieldName = 'id_estado'
+    end
+    object CDS_Clientesestado_lookup: TStringField
+      DisplayLabel = 'Estado'
+      FieldKind = fkLookup
+      FieldName = 'estado_lookup'
+      LookupDataSet = ADOQ_Estados
+      LookupKeyFields = 'id'
+      LookupResultField = 'estado'
+      KeyFields = 'id_estado'
+      Size = 5
+      Lookup = True
     end
     object CDS_Clientescep: TWideStringField
       DisplayLabel = 'Cep'
@@ -187,7 +210,84 @@ object DM_Principal: TDM_Principal
     end
   end
   object DS_Clientes: TDataSource
+    DataSet = CDS_Clientes
     Left = 72
     Top = 304
+  end
+  object ADOQ_Cidades: TADOQuery
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <
+      item
+        Name = 'est'
+        Attributes = [paNullable]
+        DataType = ftWideString
+        NumericScale = 255
+        Precision = 255
+        Size = 510
+        Value = ''
+      end>
+    SQL.Strings = (
+      'Select * from Cidades '
+      'Where Cidades.id_estado =:est '
+      'order by Cidades.cidade')
+    Left = 208
+    Top = 112
+    object ADOQ_Cidadesid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQ_Cidadescidade: TWideStringField
+      FieldName = 'cidade'
+      Size = 255
+    end
+    object ADOQ_Cidadesid_estado: TIntegerField
+      FieldName = 'id_estado'
+    end
+    object ADOQ_Cidadesestado_lookup: TStringField
+      FieldKind = fkLookup
+      FieldName = 'estado_lookup'
+      LookupDataSet = ADOQ_Estados
+      LookupKeyFields = 'id'
+      LookupResultField = 'estado'
+      KeyFields = 'id_estado'
+      Size = 5
+      Lookup = True
+    end
+  end
+  object ADOQ_Estados: TADOQuery
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from Estados '
+      'order by Estados.estado')
+    Left = 328
+    Top = 112
+    object ADOQ_Estadosid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQ_Estadosestado: TWideStringField
+      FieldName = 'estado'
+      Size = 255
+    end
+  end
+  object ADOQ_ClientesAuxiliar: TADOQuery
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select c.id, c.nome from Clientes as c')
+    Left = 440
+    Top = 112
+    object ADOQ_ClientesAuxiliarid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQ_ClientesAuxiliarnome: TWideStringField
+      FieldName = 'nome'
+      Size = 255
+    end
   end
 end
