@@ -1,6 +1,8 @@
 # **Trabalho N1 de Interação Humano-Computador 2022_1**
 # *UEG - Campus Trindade*    <img src="imagens/uegTrindade.png" width="60" height="60">
 
+## *Versão 1 - 09/05/2022*
+
 ## O trabalho consiste em fazer duas interfaces de interação com o usuário.
 - A primeira, deverá ser pouco agradável ou deficiente no quesito intuitiva e comunicativa, deixando o usuário com dúvidas e sem saber direito o que está acontecendo.
 - A segunda, deverá ser uma interface amigável com muita informação e aspecto agradável ao usuário.
