@@ -115,7 +115,6 @@ object DM_Principal: TDM_Principal
       AutoGenerateValue = arAutoInc
       DisplayLabel = 'Id'
       FieldName = 'id'
-      Required = True
     end
     object CDS_Clientesdata: TDateTimeField
       DisplayLabel = 'Data'
