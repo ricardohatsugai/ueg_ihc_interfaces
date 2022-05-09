@@ -64,6 +64,18 @@ type
     ADOQ_Cursosid: TAutoIncField;
     ADOQ_Cursoscurso: TWideStringField;
     ADOQ_Cursosid_faculdade: TIntegerField;
+    ADOQ_Relatorio: TADOQuery;
+    ADOQ_Relatorioid: TAutoIncField;
+    ADOQ_Relatorionome: TWideStringField;
+    ADOQ_Relatorioendereco: TWideStringField;
+    ADOQ_Relatoriocidade: TWideStringField;
+    ADOQ_Relatorioestado: TWideStringField;
+    ADOQ_Relatoriotelefone: TWideStringField;
+    ADOQ_Relatorioemail: TWideStringField;
+    ADOQ_Relatoriofaculdade: TWideStringField;
+    ADOQ_Relatoriocurso: TWideStringField;
+    ADOQ_Relatorioperiodo: TWideStringField;
+    DS_Relatorio: TDataSource;
   private
     { Private declarations }
   public
