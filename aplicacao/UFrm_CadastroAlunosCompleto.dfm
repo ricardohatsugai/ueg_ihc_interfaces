@@ -13,6 +13,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnClose = FormClose
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 16
@@ -23,8 +24,6 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
     Height = 492
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1046
-    ExplicitHeight = 618
     object Lbl_Data: TLabel
       Left = 24
       Top = 16
@@ -61,21 +60,21 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       Caption = 'Bairro'
     end
     object Lbl_Estado: TLabel
-      Left = 544
+      Left = 584
       Top = 80
       Width = 38
       Height = 16
       Caption = 'Estado'
     end
     object Lbl_Cidade: TLabel
-      Left = 640
+      Left = 672
       Top = 80
       Width = 39
       Height = 16
       Caption = 'Cidade'
     end
     object Lbl_Cep: TLabel
-      Left = 880
+      Left = 912
       Top = 80
       Width = 22
       Height = 16
@@ -144,7 +143,8 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
         Left = 24
         Top = 54
         Width = 417
-        Height = 24
+        Height = 22
+        Style = csOwnerDrawVariable
         TabOrder = 0
         OnEnter = CMB_FaculdadeEnter
         OnExit = CMB_FaculdadeExit
@@ -153,7 +153,8 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
         Left = 460
         Top = 54
         Width = 349
-        Height = 24
+        Height = 22
+        Style = csOwnerDrawVariable
         TabOrder = 1
       end
       object Edit_Periodo: TEdit
@@ -213,34 +214,38 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
     object Edit_Bairro: TEdit
       Left = 272
       Top = 102
-      Width = 249
+      Width = 297
       Height = 24
       CharCase = ecUpperCase
       TabOrder = 5
     end
     object Cmb_Estado: TComboBox
-      Left = 544
+      Left = 584
       Top = 102
       Width = 73
-      Height = 24
+      Height = 22
+      Style = csOwnerDrawVariable
       CharCase = ecUpperCase
       TabOrder = 6
+      OnEnter = Cmb_EstadoEnter
       OnExit = Cmb_EstadoExit
     end
     object Cmd_Cidade: TComboBox
-      Left = 640
+      Left = 672
       Top = 102
       Width = 225
-      Height = 24
+      Height = 22
+      Style = csOwnerDrawVariable
+      CharCase = ecUpperCase
       TabOrder = 7
     end
     object MaskEdit_Cep: TMaskEdit
-      Left = 880
+      Left = 912
       Top = 102
-      Width = 120
+      Width = 97
       Height = 24
-      EditMask = '999.999.999-99;0;_'
-      MaxLength = 14
+      EditMask = '99.999-999;0;_'
+      MaxLength = 10
       TabOrder = 8
       Text = ''
     end
@@ -292,6 +297,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
         93337FFFF7737777733300000033333333337777773333333333}
       NumGlyphs = 2
       TabOrder = 12
+      OnClick = Btn_SalvarClick
     end
     object Btn_Cancerlar: TBitBtn
       Left = 871
