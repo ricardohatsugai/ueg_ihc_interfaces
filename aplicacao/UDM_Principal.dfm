@@ -3,13 +3,11 @@ object DM_Principal: TDM_Principal
   Height = 654
   Width = 886
   object ADOConnection1: TADOConnection
-    Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ueg_ihc_interfac' +
-      'es\banco\dados.mdb;Mode=ReadWrite|Share Deny None;Persist Securi' +
-      'ty Info=False;'
+      'es\banco\dados.mdb;Mode=ReadWrite;Persist Security Info=False;'
+    KeepConnection = False
     LoginPrompt = False
-    Mode = Data.Win.ADODB
     Provider = 'Microsoft.Jet.OLEDB.4.0'
     Left = 64
     Top = 40
@@ -221,11 +219,11 @@ object DM_Principal: TDM_Principal
       item
         Name = 'est'
         Attributes = [paNullable]
-        DataType = ftWideString
+        DataType = ftInteger
         NumericScale = 255
         Precision = 255
         Size = 510
-        Value = ''
+        Value = 0
       end>
     SQL.Strings = (
       'Select * from Cidades '
@@ -288,6 +286,56 @@ object DM_Principal: TDM_Principal
     object ADOQ_ClientesAuxiliarnome: TWideStringField
       FieldName = 'nome'
       Size = 255
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOQ_Estados
+    Left = 336
+    Top = 192
+  end
+  object ADOQ_Faculdades: TADOQuery
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from Faculdades as F '
+      'order by F.faculdade')
+    Left = 568
+    Top = 112
+    object ADOQ_Faculdadesid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQ_Faculdadesfaculdade: TWideStringField
+      FieldName = 'faculdade'
+      Size = 255
+    end
+  end
+  object ADOQ_Cursos: TADOQuery
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <
+      item
+        Name = 'id_curso'
+        DataType = ftInteger
+        Size = -1
+        Value = 0
+      end>
+    SQL.Strings = (
+      'Select * from Cursos as C '
+      'where C.id_faculdade =:id_curso')
+    Left = 680
+    Top = 112
+    object ADOQ_Cursosid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQ_Cursoscurso: TWideStringField
+      FieldName = 'curso'
+      Size = 255
+    end
+    object ADOQ_Cursosid_faculdade: TIntegerField
+      FieldName = 'id_faculdade'
     end
   end
 end

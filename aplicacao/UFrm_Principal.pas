@@ -17,9 +17,10 @@ type
     Alunoscompleto1: TMenuItem;
     N1: TMenuItem;
     Sair1: TMenuItem;
+    ImageList1: TImageList;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
-    ImageList1: TImageList;
+    procedure Alunoscompleto1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,5 +33,21 @@ var
 implementation
 
 {$R *.dfm}
+
+uses UDM_Principal, UFrm_CadastroAlunosCompleto, UTClientes;
+
+procedure TFrm_Principal.Alunoscompleto1Click(Sender: TObject);
+begin
+Try
+  Application.CreateForm(TDM_Principal, DM_Principal);
+  Application.CreateForm(TFrm_Cadastro_Completo, Frm_Cadastro_Completo);
+
+  Frm_Cadastro_Completo.ShowModal;
+
+Finally
+  FreeAndNil(Frm_Cadastro_Completo);
+  FreeAndNil(DM_Principal);
+End;
+end;
 
 end.

@@ -8,7 +8,8 @@ uses
   UTCidades in 'UTCidades.pas',
   UTFaculdades in 'UTFaculdades.pas',
   UTCursos in 'UTCursos.pas',
-  UDM_Principal in 'UDM_Principal.pas' {DM_Principal: TDataModule};
+  UDM_Principal in 'UDM_Principal.pas' {DM_Principal: TDataModule},
+  UFrm_CadastroAlunosCompleto in 'UFrm_CadastroAlunosCompleto.pas' {Frm_Cadastro_Completo};
 
 {$R *.res}
 

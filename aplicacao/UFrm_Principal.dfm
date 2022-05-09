@@ -4173,21 +4173,19 @@ object Frm_Principal: TFrm_Principal
     Width = 955
     Height = 41
     ButtonHeight = 41
-    ButtonWidth = 41
+    ButtonWidth = 49
     Caption = 'ToolBar1'
     Images = ImageList1
     TabOrder = 0
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
-      Hint = 'Tela de cadastro de alunos completo'
-      Caption = 'ToolButton1'
-      ImageIndex = 0
-      ParentShowHint = False
-      ShowHint = True
+      Caption = 'Alunos (completo)'
+      MenuItem = Alunoscompleto1
     end
   end
   object MainMenu1: TMainMenu
+    Images = ImageList1
     Left = 504
     Top = 136
     object Cadastros1: TMenuItem
@@ -4197,6 +4195,8 @@ object Frm_Principal: TFrm_Principal
       end
       object Alunoscompleto1: TMenuItem
         Caption = 'Alunos (completo)'
+        ImageIndex = 0
+        OnClick = Alunoscompleto1Click
       end
       object N1: TMenuItem
         Caption = '-'
@@ -4207,10 +4207,11 @@ object Frm_Principal: TFrm_Principal
     end
   end
   object ImageList1: TImageList
+    ShareImages = True
     Left = 672
     Top = 112
     Bitmap = {
-      494C010102000800180010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010102002C00340010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       00000000000000000000000000000000000000000000C98936FFC98936FFC989
       36FFC98936FFC98936FFC98936FFC98936FFC98936FFC98936FFC98936FFC989

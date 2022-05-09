@@ -56,6 +56,14 @@ type
     ADOQ_ClientesAuxiliar: TADOQuery;
     ADOQ_ClientesAuxiliarid: TAutoIncField;
     ADOQ_ClientesAuxiliarnome: TWideStringField;
+    DataSource1: TDataSource;
+    ADOQ_Faculdades: TADOQuery;
+    ADOQ_Faculdadesid: TAutoIncField;
+    ADOQ_Faculdadesfaculdade: TWideStringField;
+    ADOQ_Cursos: TADOQuery;
+    ADOQ_Cursosid: TAutoIncField;
+    ADOQ_Cursoscurso: TWideStringField;
+    ADOQ_Cursosid_faculdade: TIntegerField;
   private
     { Private declarations }
   public
