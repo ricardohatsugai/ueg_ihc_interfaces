@@ -124,7 +124,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 0
+      TabOrder = 11
       object Lbl_Faculdade: TLabel
         Left = 24
         Top = 32
@@ -178,7 +178,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       ParentShowHint = False
       ReadOnly = True
       ShowHint = True
-      TabOrder = 1
+      TabOrder = 0
       Text = '  /  /    '
     end
     object Edit_Nome: TEdit
@@ -190,7 +190,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       CharCase = ecUpperCase
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 2
+      TabOrder = 1
     end
     object Edit_Endereco: TEdit
       Left = 544
@@ -201,7 +201,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       CharCase = ecUpperCase
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 3
+      TabOrder = 2
     end
     object Edit_Complemento: TEdit
       Left = 24
@@ -209,7 +209,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       Width = 225
       Height = 24
       CharCase = ecUpperCase
-      TabOrder = 4
+      TabOrder = 3
     end
     object Edit_Bairro: TEdit
       Left = 272
@@ -217,7 +217,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       Width = 297
       Height = 24
       CharCase = ecUpperCase
-      TabOrder = 5
+      TabOrder = 4
     end
     object Cmb_Estado: TComboBox
       Left = 584
@@ -226,7 +226,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       Height = 22
       Style = csOwnerDrawVariable
       CharCase = ecUpperCase
-      TabOrder = 6
+      TabOrder = 5
       OnEnter = Cmb_EstadoEnter
       OnExit = Cmb_EstadoExit
     end
@@ -237,7 +237,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       Height = 22
       Style = csOwnerDrawVariable
       CharCase = ecUpperCase
-      TabOrder = 7
+      TabOrder = 6
     end
     object MaskEdit_Cep: TMaskEdit
       Left = 912
@@ -246,7 +246,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       Height = 24
       EditMask = '99.999-999;0;_'
       MaxLength = 10
-      TabOrder = 8
+      TabOrder = 7
       Text = ''
     end
     object MaskEdit_Telefone: TMaskEdit
@@ -256,7 +256,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       Height = 24
       EditMask = '(99) 9999-9999;0;_'
       MaxLength = 14
-      TabOrder = 9
+      TabOrder = 8
       Text = ''
     end
     object Edit_Email: TEdit
@@ -264,7 +264,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       Top = 166
       Width = 361
       Height = 24
-      TabOrder = 10
+      TabOrder = 9
     end
     object MaskEdit_Celular: TMaskEdit
       Left = 544
@@ -273,7 +273,7 @@ object Frm_Cadastro_Completo: TFrm_Cadastro_Completo
       Height = 24
       EditMask = '(99) 9 9999-9999;0;_'
       MaxLength = 16
-      TabOrder = 11
+      TabOrder = 10
       Text = ''
     end
     object Btn_Salvar: TBitBtn
