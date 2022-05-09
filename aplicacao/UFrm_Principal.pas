@@ -20,7 +20,13 @@ type
     ImageList1: TImageList;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
+    Pesquisa1: TMenuItem;
+    Listagemdealunos1: TMenuItem;
     procedure Alunoscompleto1Click(Sender: TObject);
+    procedure Alunos1Click(Sender: TObject);
+    procedure Listagemdealunos1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,7 +40,21 @@ implementation
 
 {$R *.dfm}
 
-uses UDM_Principal, UFrm_CadastroAlunosCompleto, UTClientes;
+uses UDM_Principal, UFrm_CadastroAlunosCompleto, UTClientes,
+  UFrm_CadastroAlunosIncompleto, UFrm_Listagem;
+
+procedure TFrm_Principal.Alunos1Click(Sender: TObject);
+begin
+  Try
+    Application.CreateForm(TDM_Principal, DM_Principal);
+    Application.CreateForm(TFrm_CadastroIncompleto, Frm_CadastroIncompleto);
+
+    Frm_CadastroIncompleto.ShowModal;
+  Finally
+    FreeAndNil(Frm_CadastroIncompleto);
+    FreeAndNil(DM_Principal);
+  End;
+end;
 
 procedure TFrm_Principal.Alunoscompleto1Click(Sender: TObject);
 begin
@@ -48,6 +68,24 @@ Finally
   FreeAndNil(Frm_Cadastro_Completo);
   FreeAndNil(DM_Principal);
 End;
+end;
+
+procedure TFrm_Principal.Listagemdealunos1Click(Sender: TObject);
+begin
+  Try
+    Application.CreateForm(TDM_Principal, DM_Principal);
+    Application.CreateForm(TFrm_Listagem, Frm_Listagem);
+
+    DM_Principal.ADOQ_Relatorio.Active := True;
+
+    Frm_Listagem.ShowModal;
+
+    DM_Principal.ADOQ_Relatorio.Active := False;
+
+  Finally
+    FreeAndNil(Frm_Listagem);
+    FreeAndNil(DM_Principal);
+  End;
 end;
 
 end.

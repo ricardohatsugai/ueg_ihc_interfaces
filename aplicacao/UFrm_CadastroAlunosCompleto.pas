@@ -170,6 +170,14 @@ begin
 
                             DM_Principal.CDS_Clientesperiodo.Value := Edit_Periodo.Text;
 
+                            DM_Principal.ADOQ_ClientesAuxiliar.Active := True;
+                            if DM_Principal.ADOQ_ClientesAuxiliar.Locate('nome', Edit_Nome.Text, []) then
+                            begin
+                              ShowMessage('Cliente já cadastrado');
+                              Abort;
+                            end;
+
+
                             DM_Principal.CDS_Clientes.Post;
                             DM_Principal.CDS_Clientes.ApplyUpdates(-1);
                             DM_Principal.CDS_Clientes.Active := False;

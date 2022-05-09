@@ -289,7 +289,7 @@ object DM_Principal: TDM_Principal
   end
   object DataSource1: TDataSource
     DataSet = ADOQ_Estados
-    Left = 336
+    Left = 320
     Top = 192
   end
   object ADOQ_Faculdades: TADOQuery
@@ -336,5 +336,83 @@ object DM_Principal: TDM_Principal
     object ADOQ_Cursosid_faculdade: TIntegerField
       FieldName = 'id_faculdade'
     end
+  end
+  object ADOQ_Relatorio: TADOQuery
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      
+        'SELECT Clientes.id, Clientes.nome, Clientes.endereco, Cidades.ci' +
+        'dade, Estados.estado,'
+      
+        ' Clientes.telefone, Clientes.email, Faculdades.faculdade, Cursos' +
+        '.curso, Clientes.periodo'
+      'FROM Cursos'
+      
+        ' INNER JOIN (Faculdades INNER JOIN (Estados INNER JOIN (Cidades ' +
+        'INNER JOIN Clientes ON Cidades.id = Clientes.id_cidade) '
+      
+        ' ON (Estados.id = Clientes.id_estado) AND (Estados.id = Cidades.' +
+        'id_estado)) ON Faculdades.id = Clientes.id_faculdade) '
+      
+        ' ON (Faculdades.id = Cursos.id_faculdade) AND (Cursos.id = Clien' +
+        'tes.id_curso);')
+    Left = 216
+    Top = 256
+    object ADOQ_Relatorioid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQ_Relatorionome: TWideStringField
+      DisplayWidth = 25
+      FieldName = 'nome'
+      Size = 255
+    end
+    object ADOQ_Relatorioendereco: TWideStringField
+      DisplayWidth = 35
+      FieldName = 'endereco'
+      Size = 255
+    end
+    object ADOQ_Relatoriocidade: TWideStringField
+      DisplayWidth = 25
+      FieldName = 'cidade'
+      Size = 255
+    end
+    object ADOQ_Relatorioestado: TWideStringField
+      DisplayWidth = 5
+      FieldName = 'estado'
+      Size = 255
+    end
+    object ADOQ_Relatoriotelefone: TWideStringField
+      DisplayWidth = 15
+      FieldName = 'telefone'
+      Size = 255
+    end
+    object ADOQ_Relatorioemail: TWideStringField
+      DisplayWidth = 20
+      FieldName = 'email'
+      Size = 255
+    end
+    object ADOQ_Relatoriofaculdade: TWideStringField
+      DisplayWidth = 20
+      FieldName = 'faculdade'
+      Size = 255
+    end
+    object ADOQ_Relatoriocurso: TWideStringField
+      DisplayWidth = 20
+      FieldName = 'curso'
+      Size = 255
+    end
+    object ADOQ_Relatorioperiodo: TWideStringField
+      DisplayWidth = 5
+      FieldName = 'periodo'
+      Size = 255
+    end
+  end
+  object DS_Relatorio: TDataSource
+    DataSet = ADOQ_Relatorio
+    Left = 216
+    Top = 312
   end
 end
