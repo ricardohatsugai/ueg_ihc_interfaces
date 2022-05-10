@@ -24,9 +24,12 @@ type
     ToolButton3: TToolButton;
     Pesquisa1: TMenuItem;
     Listagemdealunos1: TMenuItem;
+    Sobre1: TMenuItem;
+    Sobreesteprograma1: TMenuItem;
     procedure Alunoscompleto1Click(Sender: TObject);
     procedure Alunos1Click(Sender: TObject);
     procedure Listagemdealunos1Click(Sender: TObject);
+    procedure Sobreesteprograma1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,7 +44,7 @@ implementation
 {$R *.dfm}
 
 uses UDM_Principal, UFrm_CadastroAlunosCompleto, UTClientes,
-  UFrm_CadastroAlunosIncompleto, UFrm_Listagem;
+  UFrm_CadastroAlunosIncompleto, UFrm_Listagem, UFrm_About;
 
 procedure TFrm_Principal.Alunos1Click(Sender: TObject);
 begin
@@ -85,6 +88,16 @@ begin
   Finally
     FreeAndNil(Frm_Listagem);
     FreeAndNil(DM_Principal);
+  End;
+end;
+
+procedure TFrm_Principal.Sobreesteprograma1Click(Sender: TObject);
+begin
+  Try
+    Application.CreateForm(TAboutBox, AboutBox);
+    AboutBox.ShowModal;
+  Finally
+    FreeAndNil(AboutBox);
   End;
 end;
 

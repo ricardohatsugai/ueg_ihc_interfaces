@@ -14,6 +14,7 @@ object Frm_Principal: TFrm_Principal
   Menu = MainMenu1
   OldCreateOrder = False
   Position = poScreenCenter
+  ShowHint = True
   PixelsPerInch = 96
   TextHeight = 13
   object Bevel1: TBevel
@@ -4175,17 +4176,20 @@ object Frm_Principal: TFrm_Principal
     ButtonHeight = 41
     ButtonWidth = 49
     Caption = 'ToolBar1'
+    HotImages = ImageList1
     Images = ImageList1
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 0
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
-      Hint = 'Tela de cadastro completa'
+      Hint = 'F5 - Tela de cadastro completo de alunos'
       Caption = 'Alunos (completo)'
       ImageIndex = 0
-      MenuItem = Alunoscompleto1
       ParentShowHint = False
       ShowHint = True
+      OnClick = Alunoscompleto1Click
     end
     object ToolButton2: TToolButton
       Left = 49
@@ -4216,11 +4220,13 @@ object Frm_Principal: TFrm_Principal
       Caption = '&Cadastros'
       object Alunos1: TMenuItem
         Caption = 'Alunos (simples)'
+        ShortCut = 117
         OnClick = Alunos1Click
       end
       object Alunoscompleto1: TMenuItem
         Caption = 'Alunos (completo)'
         ImageIndex = 0
+        ShortCut = 116
         OnClick = Alunoscompleto1Click
       end
       object N1: TMenuItem
@@ -4228,13 +4234,22 @@ object Frm_Principal: TFrm_Principal
       end
       object Sair1: TMenuItem
         Caption = '&Sair'
+        ShortCut = 118
       end
     end
     object Pesquisa1: TMenuItem
       Caption = 'Pesquisa'
       object Listagemdealunos1: TMenuItem
         Caption = 'Listagem de alunos'
+        ShortCut = 119
         OnClick = Listagemdealunos1Click
+      end
+    end
+    object Sobre1: TMenuItem
+      Caption = 'Sobre'
+      object Sobreesteprograma1: TMenuItem
+        Caption = 'Sobre este programa'
+        OnClick = Sobreesteprograma1Click
       end
     end
   end
@@ -4243,7 +4258,7 @@ object Frm_Principal: TFrm_Principal
     Left = 672
     Top = 112
     Bitmap = {
-      494C010103002C00440010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103002C00500010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       00000000000000000000000000000000000000000000C98936FFC98936FFC989
       36FFC98936FFC98936FFC98936FFC98936FFC98936FFC98936FFC98936FFC989
