@@ -5,7 +5,7 @@ object DM_Principal: TDM_Principal
   object ADOConnection1: TADOConnection
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ueg_ihc_interfac' +
-      'es\banco\dados.mdb;Mode=ReadWrite;Persist Security Info=False'
+      'es\dados.mdb;Mode=ReadWrite;Persist Security Info=False'
     KeepConnection = False
     LoginPrompt = False
     Provider = 'Microsoft.Jet.OLEDB.4.0'

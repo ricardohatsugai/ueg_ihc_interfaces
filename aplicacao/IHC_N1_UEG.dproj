@@ -96,6 +96,11 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <UWP_DelphiLogo44>C:\ueg_ihc_interfaces\imagens\uegTrindade.png</UWP_DelphiLogo44>
+        <Icon_MainIcon>IHC_N1_UEG_Icon1.ico</Icon_MainIcon>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <UWP_DelphiLogo150>C:\ueg_ihc_interfaces\imagens\uegTrindade.png</UWP_DelphiLogo150>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppEnableHighDPI>true</AppEnableHighDPI>
     </PropertyGroup>
@@ -127,6 +132,10 @@
         </DCCReference>
         <DCCReference Include="UFrm_Listagem.pas">
             <Form>Frm_Listagem</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UFrm_About.pas">
+            <Form>AboutBox</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
